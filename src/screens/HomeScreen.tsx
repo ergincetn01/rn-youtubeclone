@@ -88,7 +88,7 @@ function HomeScreen() {
             })}
           </ScrollView>
         </View>
-        <View style={{borderTopColor: "#5F6A6A", marginTop: 16, paddingBottom: 20, paddingTop: 12, borderTopWidth: 4,borderBottomWidth: 4, borderBottomColor: "#5F6A6A" }}>
+        <View style={{borderTopColor: "#5F6A6A", marginTop: 6, paddingBottom: 20, paddingTop: 12}}>
             <View style={styles.shortsContainer}>
                 <Image source={require("../../assets/icons/shortsIcon.png")} style={styles.shortsIon} />
                 <Text style={styles.shortsText}>Shorts</Text>
@@ -116,7 +116,20 @@ function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  scrollView: { paddingVertical: 5, paddingHorizontal: 8 },
+   main: {
+    backgroundColor: '#212121',
+    flex: 1,
+  },  
+  header: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginTop: 4,
+    marginHorizontal: 10,
+  },
+  scrollView: { paddingVertical: 5, paddingHorizontal: 8 }, 
+  imgText: { flexDirection: 'row', alignItems: 'center' },
+  youtube: { color: 'white', marginLeft: 0, fontSize: 20, fontWeight: '600' },
+  icon: { width: 60, height: 60 },
   headerRight: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -124,7 +137,6 @@ const styles = StyleSheet.create({
   },
   icons: { marginHorizontal: 4 },
   avatar: {
-    borderStyle: 'solid',
     borderWidth: 1,
     borderColor: '#212121',
     height: 50,
@@ -134,18 +146,7 @@ const styles = StyleSheet.create({
   shortsContainer: {marginBottom: 20, alignItems: "center", flexDirection: "row"},
   shortsIon: {width: 40, height: 40, marginLeft: 20, marginTop: 10},
   shortsText: {color: "#FFFFFF", fontSize: 20, marginLeft: 10},
-  main: {
-    backgroundColor: '#212121',
-    flex: 1,
-  },
-  imgText: { flexDirection: 'row', alignItems: 'center' },
-  youtube: { color: 'white', marginLeft: 10, fontSize: 20, fontWeight: '600' },
-  icon: { width: 60, height: 60 },
-  header: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    marginTop: 4,
-    marginHorizontal: 10,
-  },
+
+
 });
 export default HomeScreen;
